@@ -1,0 +1,84 @@
+tr,td {
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 5em;
+  width: 5em;
+  border-radius: 3px;
+}
+
+.grille {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  height: 2em;
+  width: 5em;
+  margin-top: 75%;
+  border-radius: 1em;
+}
+
+.elDirector {
+  background-color: red;
+}
+
+.color {
+  background: burlywood;
+}
+
+.color1 {
+  background-color: darkgoldenrod;
+}
+
+.border {
+  height: 5em;
+  width: 15em;
+  border: 2px solid black;
+  margin-bottom: 5em;
+  margin-left: 45%;
+  margin-right: 45%;
+  border-radius: 3px;
+}
+
+.go {
+  background-color: lightblue;
+  height: 4em;
+  width: 10em;
+  border-radius: 1em;
+}
+
+.relative {
+  position: relative;
+}
+
+.bg {
+  background-color: bisque;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.table2 {
+  top: 30em;
+  right: 12em;
+}
+
+.table3 {
+  top: 15em;
+  right: 5em;
+}
+
+.table4 {
+  bottom: 5em;
+  right: 16em;
+}

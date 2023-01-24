@@ -1,0 +1,26 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+.pos{
+display: flex;
+justify-content: center;
+}
+
+img{
+    position: relative;
+    top: 3em;
+    height: 20em;
+}
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.bcg{
+   background-color: rgb(12, 245, 12);  
+}
+ 

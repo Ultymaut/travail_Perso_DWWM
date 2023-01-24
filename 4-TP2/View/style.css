@@ -1,0 +1,35 @@
+body{
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+.taille{
+    width: 15em;
+    border: solid rgb(235, 232, 232) 1px;
+    border-radius: 1em;
+    right: 2em;
+}
+
+
+.card{ 
+    top: 0em;
+    left: 36%;
+    border: solid black 1em;
+    border-radius: 2px;
+    width: 30em;
+    height: 40em;
+}
+
+p{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body{
+    background-image: url("../Assets/impots2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+

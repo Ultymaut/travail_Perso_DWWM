@@ -1,0 +1,22 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    position: relative;
+    top: 3em;
+    height: 20em;
+}
+
+.bcg{
+    background-color: red;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.pos{
+    display: flex;
+    justify-content: center;
+    }

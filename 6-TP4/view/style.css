@@ -27,6 +27,7 @@ tr,td {
   width: 5em;
   margin-top: 75%;
   border-radius: 1em;
+  margin-left: 99%;
 }
 
 .elDirector {
@@ -79,12 +80,22 @@ tr,td {
 }
 
 .table4 {
-  bottom: 5em;
+  bottom: 3em;
   right: 16em;
 }
 
-.img{
-  width: 20em;
-  height: 15em;
- 
+
+.btn2 {
+  display: flex;
+  justify-content: center;
+  height: 2em;
+  width: 5em;
+  border-radius: 1em;
+  background-color: green;
+  margin-top: 5%;
+}
+
+.p{
+  margin-left: 3%;
+  padding-top: 7%;
 }

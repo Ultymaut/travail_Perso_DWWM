@@ -17,4 +17,3 @@ function message(string $param): void {
 
 message('Php 5.6');
 
-?>

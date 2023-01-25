@@ -258,7 +258,25 @@ for ($i = 0; $i <= 100; $i++) {
 
     // exceptions 90+
     // @todo il manque 91, 92, 93, 94, 95, 96, 97, 98, 99, inspirez vous du bloc "exceptions 70+" et complétez le code
-
+    if ($i == 91) {
+        $nombre = 'quatre-vingts-onze';
+    } else if ($i == 92) {
+        $nombre = 'quatre-vingts-douze';
+    } else if ($i == 93) {
+        $nombre = 'quatre-vingts-treize';
+    } else if ($i == 94) {
+        $nombre = 'quatre-vingts-quatorze';
+    } else if ($i == 95) {
+        $nombre = 'quatre-vingts-quinze';
+    } else if ($i == 96) {
+        $nombre = 'quatre-vingts-seize';
+    } else if ($i == 97) {
+        $nombre = 'quatre-vingts-sept';
+    } else if ($i == 98) {
+        $nombre = 'quatre-vingts-huit';
+    } else if ($i == 99) {
+        $nombre = 'quatre-vingts-neuf';
+    }
 
 
 

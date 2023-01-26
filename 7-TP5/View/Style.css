@@ -1,0 +1,74 @@
+.relative{
+    position: relative;
+}
+
+.card1{
+    left: 1em;
+    top: 1em;
+}
+
+.card2{
+top: 10em;
+left: 1em;
+}
+
+.card3{
+    left: 60%;
+    bottom: 39em;
+}
+
+.card4{
+    left: 60%;
+    bottom: 30em;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.bcg{
+    background: linear-gradient(to bottom right, lightblue, white);
+    /* background-color: lightblue; */
+    /* background-image: url("../Assets/bdd.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 30% 30%; */
+}
+
+.ps{
+    padding-left: 22%;
+    padding-top: 15%;
+}
+
+.text{
+    padding-left : 2em ;
+    padding-top: 1em;
+}
+
+.text2{
+    padding-top: 1em;
+    padding-left : 1em ;   
+}
+
+.text3{
+    padding-top: 1em;
+    padding-left : 3em ; 
+}
+
+.text4{
+    padding-top: 1em;
+    padding-left : 3.5em ;   
+}
+
+.bcgcard{
+    background: linear-gradient(to bottom right, rgb(4, 170, 4), white);
+}
+.bcgcard2{
+    background: linear-gradient(to bottom right, orange, white);
+}
+.bcgcard3{
+    background: linear-gradient(to bottom right, rgb(27, 171, 219), white);
+}
+.bcgcard4{
+    background: linear-gradient(to bottom right, red, white);
+}

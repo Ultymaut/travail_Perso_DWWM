@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../View/Insert.css" media="screen,projection" />
     <title>Document</title>
 </head>
-
 <body>
-    <div class="container">
+    <h1 class="text-align: center;">Tu est sur la page Insert</h1>
+
+<div class="container">
         <div class="formulaire">
-            <form enctype="multipart/form-data" action="../controller/exec_Function.php" method="post">
+            <form enctype="multipart/form-data" action="../Controller/exec_Insert.php" method="get">
                 <div class="center">
                 <input class="file" name="file" type="file" />
                 </div>
@@ -22,6 +22,9 @@
             </form>
         </div>
 
-</body>
 
+</body>
 </html>
+
+<?php
+?>

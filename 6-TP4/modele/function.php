@@ -61,14 +61,14 @@ function placeStagRotate(string $listPlaceStag): array
 }
 
 // Function 6 : JSON to CSV et création du fichier CSV 
-function generateCsv($listStagPlaces)
+function generateCsv(string $listStagPlaces) : string
 {
     if (file_exists("../modele/Save_Backup/Backup.json")) {
         $listStagPlaces = "../modele/Save_Backup/Backup.json";
     }
     $json = file_get_contents($listStagPlaces);
     $listStagPlaces = json_decode($json, true);
-    $temp = false;
+    $temp = ("Place;Nom;Prenom").PHP_EOL;
 
     foreach ($listStagPlaces as $key => $value) {
         $keytemp = $key;
@@ -76,4 +76,5 @@ function generateCsv($listStagPlaces)
     }
     $csv = '../modele/Save_Backup/DL.csv';
     file_put_contents($csv, $temp, true);
+    return $csv;
 }

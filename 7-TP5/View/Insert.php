@@ -12,7 +12,7 @@
 
 <div class="container">
         <div class="formulaire">
-            <form enctype="multipart/form-data" action="../Controller/exec_Insert.php" method="get">
+            <form enctype="multipart/form-data" action="../Controller/exec_Insert.php" method="post">
                 <div class="center">
                 <input class="file" name="file" type="file" />
                 </div>

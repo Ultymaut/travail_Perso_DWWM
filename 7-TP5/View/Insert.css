@@ -6,8 +6,12 @@ h1{
 body{
     overflow-y: hidden;
     overflow-x: hidden;
-    background: linear-gradient(to bottom right, lightblue, white);
+    /* background: linear-gradient(to bottom right, lightblue, white); */
+    /* background-color: lightblue; */
+    background-image: url("../Assets/date.png") ;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 
@@ -22,6 +26,7 @@ body{
     padding: 5%;
     margin-left: 38%;
     padding: 1%;
+    opacity: 0.7;
 }
 
 

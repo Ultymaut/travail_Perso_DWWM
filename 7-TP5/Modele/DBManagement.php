@@ -35,4 +35,7 @@ for ($i=0; $i <count($listStagPlaces) ; $i++) {
     return $status;
 }
 
-?>
+
+function selectStagiaire(){
+    
+}

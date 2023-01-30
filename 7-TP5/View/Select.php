@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1 class="text-success">tu est sur la page select</h1>
+    <h1 class="text-info">tu es sur la page select</h1>
     <?php
     $host = 'localhost';
     $dbname = 'dwwm_2023';
@@ -29,23 +29,23 @@
     } catch (PDOException $e) {
         echo $e->getMessage();
     } ?>
-<div class="position-absolute top-50 start-50 translate-middle">    
-    <table>
+<div class="position-absolute top-50 start-50 translate-middle " style="height: 50rem;">    
+    <table >
         <thead>
-            <tr class="p-3 mb-2 bg-dark text-white">
-                <th>ID</th>
-                <th>NOM</th>
-                <th>PRENOM</th>
-                <th>PLACE</th>
+            <tr class="p-3 mb-2 bg-info text-dark">
+                <th class="rounded-start-3">ID</th>
+                <th class="">NOM</th>
+                <th class="">PRENOM</th>
+                <th class="rounded-end-3">PLACE</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="">
             <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($row['ID']); ?></td>
-                    <td><?php echo htmlspecialchars($row['NOM']); ?></td>
-                    <td><?php echo htmlspecialchars($row['PRENOM']); ?></td>
-                    <td><?php echo htmlspecialchars($row['PLACE']); ?></td>
+                <tr class="">
+                    <td class="bg-info-subtle text-dark rounded-start-3"><?php echo htmlspecialchars($row['ID']); ?></td>
+                    <td class="bg-info-subtle text-dark "><?php echo htmlspecialchars($row['NOM']); ?></td>
+                    <td class="bg-info-subtle text-dark "><?php echo htmlspecialchars($row['PRENOM']); ?></td>
+                    <td class="bg-info-subtle text-dark rounded-end-3"><?php echo htmlspecialchars($row['PLACE']); ?></td>
                 </tr>
             <?php endwhile; ?>
         </tbody>

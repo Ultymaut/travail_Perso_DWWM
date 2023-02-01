@@ -2,7 +2,7 @@ h1{
     display: flex;
     justify-content: center;
     font-style: normal;
-    color : rgb(255, 54, 54);
+    color : rgb(252, 0, 0);
 }
 
 body{
@@ -16,8 +16,10 @@ body{
     background-size: 100% 100%;
 }
 
-
 th{
     width: 20rem;
  
+}
+.centre{
+    margin-left: 7em;
 }

@@ -14,13 +14,13 @@
 
 .icons3{
 
-    bottom: 24em;
-    right:  -70em;
+    bottom: 32em;
+    right:  -68em;
 }
 
 .icons4{
-    bottom: 18em;
-    right:  -70em;
+    bottom: 25em;
+    right:  -68em;
 }
 
 body{
@@ -37,5 +37,9 @@ body{
     background-size: 100% 100%;
 }
 
+
+.texte{
+    padding-top: 2em;
+}
 
 

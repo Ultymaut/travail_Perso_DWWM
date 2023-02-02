@@ -1,6 +1,8 @@
 <?php
 include "../Modele/DBManagement.php";
 
+deleteAllStagiaire();
+
 $pathfile = $_FILES['file']['tmp_name'];
 
 $listStag = ReadFileToArray($pathfile);

@@ -36,6 +36,16 @@ function insertStagiaires(array $listStagPlaces): bool
     return $status;
 }
 
+function deleteAllStagiaire(): bool
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $status = false;
+    $sql = "DELETE FROM stagiaire";
+    $stmt = $bdd->prepare($sql);
+    $status = $stmt->execute();
+    return $status;
+}
+
 function selectStagiaire(): array
 {
     $host = 'localhost';

@@ -89,3 +89,14 @@ function deleteStagiaire(): bool
     $status = $stmt->execute();
     return $status;
 }
+
+function randomizePlacesStag(array $listStagePlaces): array
+{
+    $new = array();
+    $values = array();
+    $values = array_values($listStagePlaces);
+    shuffle($values);
+
+    $new = array_combine(array_keys($listStagePlaces), $values);
+    return $new;
+}

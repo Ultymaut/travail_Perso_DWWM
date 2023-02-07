@@ -16,3 +16,5 @@ $prix = readline("Donnez le prix : ");
 $livre2 = new Livre($titre,$auteur,$prix);
 $affichage2 = $livre2 ->afficher();
 echo $affichage2;
+
+

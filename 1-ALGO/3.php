@@ -25,5 +25,4 @@ echo "\n";
 echo $b;
 echo "\n";
 echo 'fin';
-
-
+?>

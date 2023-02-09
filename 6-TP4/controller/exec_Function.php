@@ -32,4 +32,3 @@ $_SESSION =  $affichage;
 header('Location:../view/affichage.php');
 
 
-?>

@@ -4,4 +4,3 @@ session_start();
 $_SESSION = placeStagRotate('../modele/Backup.json');
 header('Location:../view/affichage.php');
 
-?>

@@ -58,6 +58,7 @@ class Employe{
         $matricule = $this->getMatricule();
         $nom = $this ->getNom();
         $prenom = $this ->getPrenom();
+        $prenom=strtolower($prenom);
         $dateNaiss = $this->getDateNaiss();
         $dateEmbauche=$this->getDateEmbauche();
         $salaire = $this->getSalaire();

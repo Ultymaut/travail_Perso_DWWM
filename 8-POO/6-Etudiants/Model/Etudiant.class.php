@@ -1,19 +1,26 @@
 <?php
 include_once "Filiere.class.php";
+/*class Etudiants qui prend les parametres de la class Filiere*/
 class Etudiant{
     private string $nom;
     private string $prenom;
     private string $dateNaiss;
     static int $id;
     private Filiere $filiere;
-    public function __construct(string $nom, string $prenom, string $dateNaiss,string $code, string $libelle){
+    public function __construct(string $nom, string $prenom, string $dateNaiss, string $libele){
         $this -> nom = $nom;
         $this -> prenom = $prenom;
         $this -> dateNaiss = $dateNaiss;
-        self::$id;
-        $this ->filiere = new Filiere($code, $libelle);
-    }
+        $this ->filiere = new Filiere($libele);
 
+    }
+    public function id(){
+        self::$id++;
+    }
+    /*resort la chaine de caractere aves les params*/
+    public function __toString(){
+        return "Je suis l'étudiant $this->nom $this->prenom ma date de naissance est : $this->dateNaiss";
+    }
     /**
      * @return Filiere
      */

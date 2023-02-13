@@ -1,15 +1,19 @@
 <?php
+/*class Filiere avec parametre pour le nom de la filiere*/
 class Filiere {
     static int $id;
-    private string $code;
-    private string $libelle;
-    public function __construct(string $code,  string $libelle)
+    private string $libele;
+    public function __construct(string $libele)
     {
-        self::$id;
-        /*$this -> code = $code;*/
-        $this -> libelle = $libelle;
+        $this -> libele = $libele;
     }
-
+    public function id(){
+        self::$id++;
+    }
+    /*resort la chaine de caractere aves les params*/
+    public function __toString(){
+        return "Filiere : $this->libele";
+    }
     /**
      * @return int
      */
@@ -29,33 +33,17 @@ class Filiere {
     /**
      * @return mixed
      */
-    public function getCode()
+    public function getLibele()
     {
-        return $this->code;
+        return $this->libele;
     }
 
     /**
-     * @param mixed $code
+     * @param mixed $libele
      */
-    public function setCode($code): void
+    public function setLibele($libele): void
     {
-        $this->code = $code;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLibelle()
-    {
-        return $this->libelle;
-    }
-
-    /**
-     * @param mixed $libelle
-     */
-    public function setLibelle($libelle): void
-    {
-        $this->libelle = $libelle;
+        $this->libele = $libele;
     }
 
 }

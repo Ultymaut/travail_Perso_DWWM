@@ -1,0 +1,89 @@
+.Background{
+    background-image: url("../image/recette-pain-chocolat.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% ;
+}
+.font{
+    border:5px black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    opacity: 0.940;
+  }
+  .font-margin{
+    margin-top: 10em;
+  }
+  .font2{
+    border:5px black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 530px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    opacity: 0.980;
+  }
+
+  th,td{
+    background-color: white;
+    opacity: 0.950;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .tabmid{
+    margin-left: 35.5em;
+  }
+
+.btn-center{
+  margin-top: 1em;
+  margin-left: 45em;
+}
+
+.home{
+  margin-left: 1em;
+}
+
+.navmarg{
+  margin-top: 2em;
+}
+
+.update{
+  display: flex;
+  justify-content: center;
+}
+
+.invisible{
+  opacity: 0;
+}
+
+.arrondi-gauche{
+  border-top-left-radius: 10px ;
+}
+.arrondi-droit{
+  border-top-right-radius: 10px ;
+}
+
+.contours{
+  width: 230px;
+  height: 352px;
+}
+
+#shadow {
+  width: 230px;
+	height: 351px;
+	box-shadow: 2px 3px 8px 2px #FFFF;
+}
+
+.bg-color{
+background-color: grey;
+}
+

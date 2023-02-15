@@ -1,32 +1,18 @@
 <?php
+
+/*class Profil afin de créer un profil au sein de la class Utilisateur*/
 class Profil{
-    private Utilisateur $utilisateur;
     private static int $id;
     private string $code;
-    private string $libele;
+    private string $libelle;
 
-    public function __construct($code,$libele,$nom, $prenom, $mail, $tel, $salaire,$login,$passsword,$services)
+    public function __construct($code,$libelle)
     {
-        self::$id++;
         $this->code = $code;
-        $this->libele=$libele;
-        $this-> utilisateur = new Utilisateur($nom, $prenom, $mail, $tel, $salaire,$login,$passsword,$services);
+        $this->libelle=$libelle;
     }
-
-    /**
-     * @return Utilisateur
-     */
-    public function getUtilisateur(): Utilisateur
-    {
-        return $this->utilisateur;
-    }
-
-    /**
-     * @param Utilisateur $utilisateur
-     */
-    public function setUtilisateur(Utilisateur $utilisateur): void
-    {
-        $this->utilisateur = $utilisateur;
+    public function __auto(){
+        self::$id++;
     }
 
     /**
@@ -64,17 +50,17 @@ class Profil{
     /**
      * @return string
      */
-    public function getLibele(): string
+    public function getLibelle(): string
     {
-        return $this->libele;
+        return $this->libelle;
     }
 
     /**
      * @param string $libele
      */
-    public function setLibele(string $libele): void
+    public function setLibelle(string $libelle): void
     {
-        $this->libele = $libele;
+        $this->libelle = $libelle;
     }
 
 }

@@ -1,31 +1,52 @@
 <?php
+include_once "Profil.class.php";
 
+/*class enfant de la class Personne est la class Profil est intégrer au sein de cette class*/
 class Utilisateur extends Personne{
     private string $login;
     private string $passsword;
     private string $services;
-    public function __construct($nom, $prenom, $mail, $tel, $salaire,$login,$passsword,$services)
+    private Profil $profil ;
+    public function __construct($nom, $prenom, $mail, $tel, $salaire,$login,$passsword,$services,$profil)
     {
         parent::__construct($nom, $prenom, $mail, $tel, $salaire);
         $this ->login = $login;
         $this ->passsword = $passsword;
         $this ->services = $services;
+        $this -> Profil = $profil;
     }
-    public function __toString()
+/*Affiche de la class Personne avec d'autres données*/
+    public function afficher() : void
     {
-        if ($this->services=="Manager"){
-             return parent::__toString();
-        }
-
+        parent::afficher();
+        $code = $this->Profil->getCode();
+        echo "- ID : $this->login\n- Services : $this->services \n- Code : $code\n";
     }
+/*Calcul le salaire si une conditions est remplie puis la renvoie a la methode de la class mere Personne*/
     public function calculSalaire(): float
     {
         if ($this->services == "Manager"){
-            $this->salaire += $this->salaire * 10/100;
+           return $this->salaire += $this->salaire * 10/100;
         } elseif ($this->services == "Directeur"){
-            $this->salaire += $this->salaire * 40/100;
+            return $this->salaire += $this->salaire * 40/100;
         }
-        return parent::__calculSalaire();
+        return parent::calculSalaire();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProfil()
+    {
+        return $this->profil;
+    }
+
+    /**
+     * @param mixed $profil
+     */
+    public function setProfil($profil): void
+    {
+        $this->profil = $profil;
     }
 
     /**

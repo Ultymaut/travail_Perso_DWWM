@@ -16,7 +16,7 @@ class Manager extends Personne{
     /*calcul du salaire par rapport a son poste de manager*/
     public function calculSalaire(): float
     {
-            return $this->salaire += $this->salaire * 35/100;
+        return $this->salaire += $this->salaire * 35/100;
     }
 
     /*Affichage des infos du ou des manager(s)*/

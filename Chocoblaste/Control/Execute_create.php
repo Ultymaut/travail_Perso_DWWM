@@ -1,7 +1,6 @@
 <?php 
-include_once "../DAO/Chocoblaste.DAO.php";
+include_once "../model/InsertChocoblaste.class.php";
 session_start();
-
 
 // $nom = readline("Donnez votre Nom : ");
 // $prenom = readline("Donnez votre Prénom : ");;
@@ -13,19 +12,6 @@ session_start();
 $nom = $_POST['name'];
 $prenom = $_POST['surname'];
 $dateChoco = $_POST['dateChoco'];
-$choco = new Chocoblaste($nom,$prenom,$dateChoco);
-InsertChocoblaste($choco);
-
-
-
-
-header('Location:../View/main.php');
-
-
-
-
-
-
-
-
-?>
+$choco = new InsertChocoblaste($nom,$prenom,$dateChoco);
+$choco ->InsertChocoblaste($choco);
+header('Location:../View/index.php');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 22 fév. 2023 à 11:53
+-- Généré le : mer. 22 fév. 2023 à 16:27
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 7.4.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `boite_à_jurons`
+-- Base de données : `boite_a_jurons`
 --
 
 -- --------------------------------------------------------
@@ -57,6 +57,13 @@ CREATE TABLE `type_infractions` (
   `libelee` varchar(50) NOT NULL,
   `montant` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `type_infractions`
+--
+
+INSERT INTO `type_infractions` (`id_Infraction`, `libelee`, `montant`) VALUES
+(1, 'petit j', 0.1);
 
 -- --------------------------------------------------------
 
@@ -102,6 +109,16 @@ ALTER TABLE `type_infractions`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
   ADD KEY `users_profile_FK` (`id_profile`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `type_infractions`
+--
+ALTER TABLE `type_infractions`
+  MODIFY `id_Infraction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Contraintes pour les tables déchargées

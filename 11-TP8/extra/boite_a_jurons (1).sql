@@ -1,143 +1,104 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1
--- Généré le : mer. 22 fév. 2023 à 16:27
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 7.4.29
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+#------------------------------------------------------------
+# Table: users
+#------------------------------------------------------------
 
---
--- Base de données : `boite_a_jurons`
---
+CREATE TABLE users(
+        id_user       Int  Auto_increment  NOT NULL ,
+        nom           Varchar (50) NOT NULL ,
+        prenom        Varchar (50) NOT NULL ,
+        dateNaissance Date NOT NULL ,
+        solde         Float NOT NULL
+	,CONSTRAINT users_PK PRIMARY KEY (id_user)
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `fait`
---
+#------------------------------------------------------------
+# Table: profile
+#------------------------------------------------------------
 
-CREATE TABLE `fait` (
-  `id_Infraction` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE profile(
+        id_profile Int  Auto_increment  NOT NULL ,
+        login      Varchar (50) NOT NULL ,
+        mdp        Varchar (50) NOT NULL ,
+        privilege  Bool NOT NULL
+	,CONSTRAINT profile_PK PRIMARY KEY (id_profile)
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `profile`
---
+#------------------------------------------------------------
+# Table: type_Infractions
+#------------------------------------------------------------
 
-CREATE TABLE `profile` (
-  `id_profile` int(11) NOT NULL,
-  `login` varchar(50) NOT NULL,
-  `mdp` varchar(50) NOT NULL,
-  `privilege` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE type_Infractions(
+        id_Infraction Int  Auto_increment  NOT NULL ,
+        libelee       Varchar (50) NOT NULL ,
+        montant       Float NOT NULL
+	,CONSTRAINT type_Infractions_PK PRIMARY KEY (id_Infraction)
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `type_infractions`
---
+#------------------------------------------------------------
+# Table: balance
+#------------------------------------------------------------
 
-CREATE TABLE `type_infractions` (
-  `id_Infraction` int(11) NOT NULL,
-  `libelee` varchar(50) NOT NULL,
-  `montant` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE balance(
+        id_balance Int  Auto_increment  NOT NULL ,
+        nom        Varchar (50) NOT NULL ,
+        prenom     Varchar (50) NOT NULL
+	,CONSTRAINT balance_PK PRIMARY KEY (id_balance)
+)ENGINE=InnoDB;
 
---
--- Déchargement des données de la table `type_infractions`
---
 
-INSERT INTO `type_infractions` (`id_Infraction`, `libelee`, `montant`) VALUES
-(1, 'petit j', 0.1);
+#------------------------------------------------------------
+# Table: detenir
+#------------------------------------------------------------
 
--- --------------------------------------------------------
+CREATE TABLE detenir(
+        id_user    Int NOT NULL ,
+        id_profile Int NOT NULL ,
+        id_balance Int NOT NULL
+	,CONSTRAINT detenir_PK PRIMARY KEY (id_user,id_profile,id_balance)
 
---
--- Structure de la table `users`
---
+	,CONSTRAINT detenir_users_FK FOREIGN KEY (id_user) REFERENCES users(id_user)
+	,CONSTRAINT detenir_profile0_FK FOREIGN KEY (id_profile) REFERENCES profile(id_profile)
+	,CONSTRAINT detenir_balance1_FK FOREIGN KEY (id_balance) REFERENCES balance(id_balance)
+)ENGINE=InnoDB;
 
-CREATE TABLE `users` (
-  `id_user` int(11) NOT NULL,
-  `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
-  `dateNaissance` date NOT NULL,
-  `solde` float NOT NULL,
-  `id_profile` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Index pour les tables déchargées
---
+#------------------------------------------------------------
+# Table: fait
+#------------------------------------------------------------
 
---
--- Index pour la table `fait`
---
-ALTER TABLE `fait`
-  ADD PRIMARY KEY (`id_Infraction`,`id_user`),
-  ADD KEY `fait_users0_FK` (`id_user`);
+CREATE TABLE fait(
+        id_Infraction Int NOT NULL ,
+        id_user       Int NOT NULL ,
+        date          Datetime NOT NULL
+	,CONSTRAINT fait_PK PRIMARY KEY (id_Infraction,id_user)
 
---
--- Index pour la table `profile`
---
-ALTER TABLE `profile`
-  ADD PRIMARY KEY (`id_profile`);
+	,CONSTRAINT fait_type_Infractions_FK FOREIGN KEY (id_Infraction) REFERENCES type_Infractions(id_Infraction)
+	,CONSTRAINT fait_users0_FK FOREIGN KEY (id_user) REFERENCES users(id_user)
+)ENGINE=InnoDB;
 
---
--- Index pour la table `type_infractions`
---
-ALTER TABLE `type_infractions`
-  ADD PRIMARY KEY (`id_Infraction`);
 
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `users_profile_FK` (`id_profile`);
+#------------------------------------------------------------
+# Table: decla
+#------------------------------------------------------------
 
---
--- AUTO_INCREMENT pour les tables déchargées
---
+CREATE TABLE decla(
+        id_decla      Int  Auto_increment  NOT NULL ,
+        id_Infraction Int NOT NULL ,
+        id_balance    Int NOT NULL ,
+        id_user       Int NOT NULL ,
+        dated         Datetime NOT NULL
+	,CONSTRAINT declare_PK PRIMARY KEY (id_decla)
 
---
--- AUTO_INCREMENT pour la table `type_infractions`
---
-ALTER TABLE `type_infractions`
-  MODIFY `id_Infraction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+	,CONSTRAINT declare_type_Infractions_FK FOREIGN KEY (id_Infraction) REFERENCES type_Infractions(id_Infraction)
+	,CONSTRAINT declare_balance0_FK FOREIGN KEY (id_balance) REFERENCES balance(id_balance)
+	,CONSTRAINT declare_users1_FK FOREIGN KEY (id_user) REFERENCES users(id_user)
+)ENGINE=InnoDB;
 
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `fait`
---
-ALTER TABLE `fait`
-  ADD CONSTRAINT `fait_type_Infractions_FK` FOREIGN KEY (`id_Infraction`) REFERENCES `type_infractions` (`id_Infraction`),
-  ADD CONSTRAINT `fait_users0_FK` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
-
---
--- Contraintes pour la table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_profile_FK` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id_profile`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

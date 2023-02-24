@@ -22,7 +22,8 @@ class Infraction
     {
         $this->montant = $montant;
         $this->type = $type;
-        $this->dateH = date_format(date_create(), 'd/m/Y-h:m:s');
+        $this->dateH = date('Y-m-d h:m:s');
+        $this->id_infraction;
     }
 
     /**

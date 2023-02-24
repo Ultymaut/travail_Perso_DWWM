@@ -2,7 +2,6 @@
 require_once "../modele/Infraction.class.php";
 
 class DbManagerInfractions{
-    private int $id;
     private PDO $conn;
 
     public function __construct($conn)
@@ -18,16 +17,15 @@ class DbManagerInfractions{
         $req->closeCursor();
     }
 
-    public function SelectInfractions ($Infractions) :array{
-        $req = $this->getConn()->prepare('SELECT * FROM type_infractions WHERE id_Infraction=$id_Infraction');
+    public function SelectInfractions ($infractions) :Infraction{
+        $req = $this->getConn()->prepare('SELECT * FROM type_infractions WHERE id_Infraction : id');
+        $req ->bindValue(': id',$infractions->getId_infraction(),PDO::PARAM_INT);
         $req->execute();
 
-        while ($donnees = $req->fetch()) {
-            $Liste[] = new Infraction($donnees['montant'], $donnees['libelee']);
-        }
-
+        $donnees = $req->fetch(PDO::FETCH_ASSOC);
+        $infractions = new Infraction($donnees['libelee'],$donnees['montant']);
         $req->closeCursor();
-        return $Liste ;
+        return $infractions ;
     }
     public function SelectAllInfractions (): array {
         $req = $this->getConn()->prepare('SELECT * FROM type_infractions');
@@ -57,21 +55,6 @@ class DbManagerInfractions{
     }
     public function HistoriqueInfraction(){
 
-    }
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
     }
 
     /**

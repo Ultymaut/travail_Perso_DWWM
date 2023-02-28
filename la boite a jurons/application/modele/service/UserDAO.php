@@ -79,7 +79,6 @@ class UserDAO
         $user= $this->getUsertByLogin($log);
         $id=$user->getId_user();
 
-
         $req= $this->getConn()->prepare("UPDATE users SET nom = :nom, prenom=:prenom, dateNaissance=:dateNaissance where id_user=:id_user");
 
         $req->bindValue(':nom', $nom, PDO::PARAM_STR);
@@ -89,8 +88,6 @@ class UserDAO
 
         $req->execute();
         $req->closeCursor();
-
-
     }
 
     public function deleteUser (User $user)
@@ -105,7 +102,7 @@ class UserDAO
 
         return $req;
     }
-    
+
 
     /**
      * Get the value of conection

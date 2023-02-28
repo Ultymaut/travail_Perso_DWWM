@@ -76,9 +76,7 @@ class InfractionDAO{
         $req->execute();
         $req->closeCursor();
     }
-    public function HistoriqueInfraction(){
 
-    }
 
     /**
      * @return PDO

@@ -1,6 +1,9 @@
 <?php
 
 require_once 'Profile.class.php';
+require_once 'Infraction.class.php';
+require_once '../modele/service/UserDao.php';
+require_once '../modele/service/UserDao.php';
 
 /**
  * 

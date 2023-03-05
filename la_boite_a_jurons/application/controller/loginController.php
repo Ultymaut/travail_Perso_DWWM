@@ -8,52 +8,61 @@ require_once "../modele/BDConnexion.php";
  * Verifie si le user exist
  * Verifie ses droits est privilege et redirige vers les bonnes pages
  */
-
+//BAPTISTE ET KATIA
 session_start();
 $login = $_POST["login"];
 if (isset($conn)) {
-    $userDAO = new UserDAO($conn);
-
     if (isset($_POST["login"])) {
+
+        $userDAO = new UserDAO($conn);
         $user = $userDAO->getUsertByLogin($_POST["login"]);
 
         if (isset($user)) {
-             
 
 
-            $_SESSION['user']=$user;
-            
+
+            $_SESSION['user'] = $user;
+
             $userProfile = $user->getProfile();
             $privilege = $userProfile->getPrivilege();
             $password = $userProfile->getMDp();
 
-            if ($privilege == true && $_POST['password'] === $password) {
+            if ($privilege == true && $_POST['pass'] === $password) {
+                $userDAO = new UserDAO($conn);
+                $user = $userDAO->getUsertByLogin($_POST["login"]);
 
-                $_SESSION['login']=$_POST['login'];
-                echo $_SESSION['nom'] = $user->getNom();
-                echo $_SESSION['prenom']=$user->getPrenom();
-                echo $_SESSION['naiss'] = $user ->getDateNaissance();
 
-                header("Location:../view/admin/DashboardAdmin.php");
-            } elseif ($privilege == false && $_POST['password'] === $password) {
+                $_SESSION['login'] = $_POST['login'];
+                $_SESSION['nomDash'] = $user->getNom();
+                $_SESSION['prenomDash'] = $user->getPrenom();
+                $_SESSION['naissDash'] = $user->getDateNaissance();
+                $userListe = $userDAO->selectAllUser();
+                $_SESSION['listeUser'] = $userListe;
+                echo "admin";
 
-                $_SESSION['login']=$_POST['login'];
-                echo $_SESSION['nom'] = $user->getNom();
-                echo $_SESSION['prenom']=$user->getPrenom();
-                echo $_SESSION['naiss'] = $user ->getDateNaissance();
+                // header("Location:../view/admin/DashboardAdmin.php");
+            } elseif ($privilege == false && $_POST['pass'] === $password) {
+                $userDAO = new UserDAO($conn);
+                $user = $userDAO->getUsertByLogin($_POST["login"]);
 
-                header("Location:../view/user/DashboardUser.php");
+
+                $_SESSION['login'] = $_POST['login'];
+                $_SESSION['nomDash'] = $user->getNom();
+                $_SESSION['prenomDash'] = $user->getPrenom();
+                $_SESSION['naissDash'] = $user->getDateNaissance();
+                $userListe = $userDAO->selectAllUser();
+                $_SESSION['listeUser'] = $userListe;
+                // header("Location:../view/user/DashboardUser.php");
+                echo "user";
             } else {
                 echo "Mot de passe Inccorect";
             }
         } else {
             echo "Enregistrez vous au près du shérif";
         }
-
     } else {
         echo "NO DATA";
     }
 } else {
     echo "Erreur de co.";
 }
-

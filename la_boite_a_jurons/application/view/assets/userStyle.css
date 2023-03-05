@@ -1,6 +1,6 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-
+/* KAOUTHAR */
 /*nave Bare*/
 .fa-2x {
     font-size: 4em;
@@ -136,17 +136,30 @@ nav ul, nav li {
 
 /* -------Dashboard User paga  */
 
+#Dash{
+    
+ background-color: rgb(255, 255, 255);
+  background-image: url(img/cowboyUser.gif);
+  background-size: 8%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: bottom;
+  background-attachment: fixed;
+}
+
 #dashboardUser{
-    margin-left:190px ;
-    margin-top: 5%;
+    /* background-image: url('img/CuKs.gif');
+    background-size: cover; */
+    /* margin-left:190px ;
+    margin-top: 5%; */
+
     padding-bottom: 10%;
     text-align: center;
     padding: 50px;
 }
 
 #infoG{
-    border: #000000 solid 0.9px;
-    border-radius: 10px;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -157,28 +170,71 @@ nav ul, nav li {
     text-align: left;
     border: #000000 solid 0.9px;
     border-radius: 12px;
-    padding: 100px;
+    padding: 50px;
     margin: 20px;
     font-weight: bold;
-    
-
+    box-shadow: 3px 2px 15px gray;  
 }
 
 code{
     font-size: 16px;
 }
 
-#solde > p {
+.solde{
     border: #000000 solid 0.9px;
-    padding: 100px;
+    border-radius: 12px;
+    padding: 50px;
     margin: 20px;
+    font-size: 64px;
+    box-shadow: 3px 2px 15px gray;  
+}
+
+#solde > p {
+  
     font-size: 64px;
 
 }
 
 #histoJ{
     border: #000000 solid 0.9px;
-    padding: 100px;
+    border-radius: 12px;
+    padding: 50px;
     margin: 20px;
+    box-shadow: 3px 2px 15px gray;  
+}
+
+.tablo{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 20%;
+    border: black solid 1px ;
+    border-radius: 1em;
+    width: 80%;
+}
+
+.pads{
+    padding-left: 3em;
+}
+
+/* -----------UpdateInfraction */
+#targetBody{
+background-color: rgb(255, 255, 255);
+  background-image: url(img/cowboyUser.gif);
+  background-size: 8%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: bottom;
+  background-attachment: fixed;
+}
+
+#ReadListUser .table{
+    color: #000000;
+   
+    padding-bottom: 10%;
+    text-align: center;
+    padding: 50px;
 
 }
+
+/*  */

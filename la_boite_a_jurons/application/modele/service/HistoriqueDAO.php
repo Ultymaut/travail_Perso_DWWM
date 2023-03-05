@@ -1,6 +1,7 @@
 <?php
-require_once "InfractionDAO.php";
-require_once "UserDAO.php";
+require_once "C:/xampp\htdocs\la_boite_a_jurons\application\modele\service\InfractionDAO.php";
+require_once "C:/xampp\htdocs\la_boite_a_jurons\application\modele\service\UserDAO.php";
+//KATIA ET BAPTISTE
 class HistoriqueDAO
 {
     private $conn;
@@ -8,6 +9,7 @@ class HistoriqueDAO
     {
         $this-> setConn ($conn);
     }
+
     public function insertIntoFait(User $user, Infraction $infractions)
     {
         $date = date("Y-m-d h:m:s");
@@ -23,21 +25,51 @@ class HistoriqueDAO
         $req->execute();
         $req->closeCursor();
     }
-    public function selectFaitByUser()
+
+    public function selectFaitByUser(User $user)
     {
-        $req = $this -> getConn() -> prepare ('SELECT * FROM historique_solde');
+        $conn = $this->getConn();
+        $userDAO = new UserDAO($conn);
+        $log= $user->getProfile()->getLogin();
+        $user= $userDAO->getUsertByLogin($log);
+        $id_user=$user->getId_user();
+
+
+        $req = $this -> getConn() -> prepare ('SELECT DISTINCT
+        libelee,
+        round(sum(t.montant),2) AS cerdit 
+       FROM ((fait f join users u) join type_infractions t) 
+       WHERE f.id_user = u.id_user  AND f.id_user= :id_user and f.id_Infraction = t.id_Infraction GROUP BY libelee;');
+
+       $req->bindValue(':id_user',$id_user,PDO::PARAM_INT);
+
         $req->execute();
         // recuperation en tableaux assiociative les donnée de l'infraction et user:
-        while ($ligne = $req->fetch(PDO::FETCH_ASSOC)){
-            $historiquelist[] = array('nom'=>$ligne['nom'],'prenom'=>$ligne['prenom'],'login'=>$ligne['login'],'solde'=>$ligne['solde']);
+        if($req->execute())
+        {
+            while ($ligne = $req->fetch(PDO::FETCH_ASSOC)){
+                $historiquelist[] = array('libelee'=>$ligne['libelee'],'solde'=>$ligne['cerdit']);
+            }
+            $req->closeCursor();
+            return $historiquelist;
 
+        }else{
+            return null;
         }
-        $req->closeCursor();
-        return $historiquelist;
+        
     }
     public function selectAllFaitDate()
     {
-        $req = $this -> getConn() -> prepare ('SELECT * FROM historique_date');
+        $req = $this -> getConn() -> prepare ('SELECT DISTINCT
+        u.nom AS nom,
+        u.prenom AS prenom,
+        u.login AS login,
+        t.libelee AS libelee,
+        round(sum(t.montant),2) AS solde,
+        f.date AS date 
+       
+       FROM ((fait f join users u) join type_infractions t) 
+       WHERE f.id_user = u.id_user AND f.id_Infraction = t.id_Infraction GROUP BY f.date;');
         $req->execute();
 
         // recuperation en tableaux assiociative les donnée de l'infraction et user:
@@ -49,6 +81,7 @@ class HistoriqueDAO
         $req->closeCursor();
         return $historiquelist;
     }
+
     /**
      * @return mixed
      */

@@ -1,0 +1,70 @@
+<!-- KAOUTHAR -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body id="login">
+    <form id="form1" action="../controller/loginController.php" method="post">
+        <h3>Login Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Login" id="username" name="login" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password" required>
+        <span id="btn1">
+            <button id="submit">Log IN</button>
+        </span>
+        <span id="btn2">
+            <button><a href="./addUser.php" target="_self">SHERIF SIGN UP </button>
+        </span>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submit').click(function (e) {
+                e.preventDefault();
+                let log = $('#username').val();
+                let password = $('#password').val();
+
+                $.ajax({
+                    type: 'post',
+                    url: '../controller/loginController.php',
+                    data: {
+                        login: log,
+                        pass: password
+                    },
+                    success: function (response) {
+                        if (response === 'admin') {
+                            window.location.href = './admin/DashboardAdmin.php';
+                        }if (response === 'user') {
+                            window.location.href = './user/DashboardUser.php';
+                            
+                        }else {
+                            alert(response);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    </script>
+</body>
+
+</html>

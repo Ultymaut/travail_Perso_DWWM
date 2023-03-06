@@ -1,6 +1,10 @@
 <?php
 require_once "C:/xampp\htdocs\la_boite_a_jurons\application\modele\service\InfractionDAO.php";
 require_once "C:/xampp\htdocs\la_boite_a_jurons\application\modele\service\UserDAO.php";
+<<<<<<< HEAD:11-TP8/application/modele/service/HistoriqueDAO.php
+=======
+//KATIA ET BAPTISTE
+>>>>>>> ff3caee15e9bdf7ef4c9b05c61454ab625a52110:la_boite_a_jurons/application/modele/service/HistoriqueDAO.php
 class HistoriqueDAO
 {
     private $conn;
@@ -9,9 +13,12 @@ class HistoriqueDAO
         $this-> setConn ($conn);
     }
 
+<<<<<<< HEAD:11-TP8/application/modele/service/HistoriqueDAO.php
 
    
 
+=======
+>>>>>>> ff3caee15e9bdf7ef4c9b05c61454ab625a52110:la_boite_a_jurons/application/modele/service/HistoriqueDAO.php
     public function insertIntoFait(User $user, Infraction $infractions)
     {
         $date = date("Y-m-d h:m:s");
@@ -28,7 +35,10 @@ class HistoriqueDAO
         $req->closeCursor();
     }
 
+<<<<<<< HEAD:11-TP8/application/modele/service/HistoriqueDAO.php
 
+=======
+>>>>>>> ff3caee15e9bdf7ef4c9b05c61454ab625a52110:la_boite_a_jurons/application/modele/service/HistoriqueDAO.php
     public function selectFaitByUser(User $user)
     {
         $conn = $this->getConn();
@@ -85,8 +95,11 @@ class HistoriqueDAO
         return $historiquelist;
     }
 
+<<<<<<< HEAD:11-TP8/application/modele/service/HistoriqueDAO.php
     
 
+=======
+>>>>>>> ff3caee15e9bdf7ef4c9b05c61454ab625a52110:la_boite_a_jurons/application/modele/service/HistoriqueDAO.php
     /**
      * @return mixed
      */

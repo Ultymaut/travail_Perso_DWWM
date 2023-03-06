@@ -3,13 +3,9 @@ require_once('../../modele/BDConnexion.php');
 require_once('../../modele/service/UserDAO.php');
 require_once('../../modele/service/InfractionDAO.php');
 require_once('../../modele/service/HistoriqueDAO.php');
-<<<<<<< HEAD:11-TP8/application/controller/Admin/decrementInfractionControllerAdmin.php
-=======
 
->>>>>>> ff3caee15e9bdf7ef4c9b05c61454ab625a52110:la_boite_a_jurons/application/controller/Admin/decrementInfractionControllerAdmin.php
-// KAOUTHAR
 session_start();
-
+// KAOUTHAR
 if (isset($conn)) {
     $UserDAO = new UserDAO($conn);
 
@@ -29,7 +25,7 @@ if (isset($conn)) {
 
         $infraction = $infractionDao->selectInfractionsByLibelee($_POST['infractionLibel']);
         $user = $UserDAO->getUsertByLogin($_POST['log']);
-        $infractionDao->decrementeInfraction($user, $infraction);
+        $infractionDao->incrementeInfraction($user, $infraction);
         $UserDAO->updateUserSolde($user);
         echo "success";
      
@@ -40,3 +36,4 @@ if (isset($conn)) {
         } else {
         echo "no data";
     }
+

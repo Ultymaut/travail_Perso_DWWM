@@ -2,6 +2,8 @@
 require_once("C://xampp\htdocs\la_boite_a_jurons\application\modele\User.class.php");
 require_once ("C://xampp\htdocs\la_boite_a_jurons\application\modele\Infraction.class.php");
 require_once "C://xampp\htdocs\la_boite_a_jurons\application\modele\Profile.class.php";
+
+//KATIA
 class UserDAO
 {
 

@@ -11,26 +11,25 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/variable.scss">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/solar/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/solar/variable.scss">
             <link rel="stylesheet" href="partials/Style.css/style.css">
         {% endblock %}
     </head>
     <body>
-    {% block body %}
 
-    {% endblock %}
 
     {% block header %}
-        {% include "partials/_header.html.twig" %}
+        {% include "/partials/_header.html.twig" %}
     {% endblock %}
 
-    {% block info %}
-        {% include "partials/_info.html.twig" %}
+
+    {% block body %}
     {% endblock %}
+
 
     {% block footer %}
-        {% include 'partials/_footer.html.twig' %}
+        {% include '/partials/_footer.html.twig' %}
     {% endblock %}
 
 

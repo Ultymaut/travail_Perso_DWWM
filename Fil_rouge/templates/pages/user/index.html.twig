@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block title %}Page User
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        {% if not user.items is same as ([]) %}
+        <h1 class="justify-content-center d-flex text-decoration-underline"> Liste des utilisateurs </h1>
+        <div class="count d-flex justify-content-center mt-4">
+            <h4> Il y à {{ user.getTotalItemCount }} utilisateurs enregistrés sur le site</h4>
+        </div>
+        <div class="justify-content-center d-flex mt-3">
+
+            <table class="table table-hover">
+                <thead>
+                <tr class="table-light">
+                    <th scope="row"></th>
+                    <td class="table-light pe-5"> ID </td>
+                    <td class="table-light ps-5 pe-5"> NOM </td>
+                    <td class="table-light ps-5 pe-5"> PRENOM </td>
+                    <td class="table-light ps-5 pe-5"> DATE_NAISSANCE </td>
+                    <td class="table-light ps-5 pe-5"> LOGIN </td>
+                    <td class="table-light ps-5 pe-5"> E-MAIL </td>
+                </tr>
+                </thead>
+                {% for user in user %}
+
+                    <tbody>
+                    <tr class="table-dark">
+                        <th scope="row"></th>
+                        <td>{{ user.id }}</td>
+                        <td class="ps-5">{{ user.name }}</td>
+                        <td class="ps-5">{{ user.surname }}</td>
+                        <td class="ps-5">{{ user.birthday|date('d/m/Y') }}</td>
+                        <td class="ps-5">{{ user.login }}</td>
+                        <td class="ps-5">{{ user.email }}</td>
+                    </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="navigation d-flex justify-content-center mt-2">
+            {{ knp_pagination_render(user) }}
+        </div>
+        {% else %}
+            <h4> Il n'y pas d'utilisateur enregistrés</h4>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

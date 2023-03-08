@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/doctrine-messenger" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/messenger" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/composer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/Fil_rouge/vendor/phpunit/php-invoker" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/Fil_rouge/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

@@ -46,7 +46,7 @@ class User
 
     #[ORM\Column(length: 15)]
     #[Assert\Length(
-        min: 2,
+        min: 6,
         max: 15,
         minMessage: 'Your first name must be at least {{ limit }} characters long',
         maxMessage: 'Your first name cannot be longer than {{ limit }} characters',

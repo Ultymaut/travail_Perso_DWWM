@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec25d6e0-553f-45e5-a6b5-4f82427a3ca2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controller/Admin/AjoutInfractionControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Admin/AjoutInfractionControllerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/Admin/CreationInfractionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Admin/CreationInfractionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/Admin/decrementInfractionControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/Admin/decrementInfractionControllerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/loginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/loginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controller/logoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controller/logoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modele/BDConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modele/BDConnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modele/Fait.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modele/Fait.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modele/service/HistoriqueDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modele/service/HistoriqueDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modele/service/InfractionDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modele/service/InfractionDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modele/service/UserDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modele/service/UserDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/admin/AjoutInfraction.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/admin/AjoutInfraction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/admin/incrementationInfractions.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/admin/incrementationInfractions.php" afterDir="false" />
-    </list>
+    <list default="true" id="ec25d6e0-553f-45e5-a6b5-4f82427a3ca2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +49,7 @@
       <workItem from="1677965152201" duration="2566000" />
       <workItem from="1678012358045" duration="2971000" />
       <workItem from="1678054249540" duration="337000" />
+      <workItem from="1678262136965" duration="7000" />
     </task>
     <servers />
   </component>

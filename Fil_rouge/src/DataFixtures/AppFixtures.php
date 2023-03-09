@@ -20,7 +20,8 @@ class AppFixtures extends Fixture
                 ->setBirthday(date_create($faker->date()))
                 ->setEmail($faker->email)
                 ->setLogin($faker->userName)
-                ->setPassword($faker->password);
+                ->setPassword($faker->password)
+                ->setRoles(["ROLE_USER"]);
             $manager->persist($user[$i]);
         }
         $manager->flush();

@@ -4,14 +4,16 @@ namespace App\Form;
 
 use App\Entity\User;
 
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+
 
 use Symfony\Component\Validator\Constraints as Assert;
-
 
 class UserType extends AbstractType
 {
@@ -44,14 +46,15 @@ class UserType extends AbstractType
                     new Assert\NotNull()
                 ]
             ])
-            ->add('birthday', DateTimeType::class, [
+            ->add('birthday', DateType::class, [
                 'attr' => [
-                    'widget' => 'single_text',
-                    'html5'=>false
+
                 ],
-                'label' => 'Date de naissance',
+                'widget' => 'single_text',
+                'html5'=>true,
+                'label' => 'Date de naissance ',
                 'label_attr' => [
-                    'class' => 'date_format mt-4'
+                    'class' => 'date_format mt-5 pt-3'
                 ],
                 'constraints' => [
                     new Assert\NotBlank(),
@@ -85,21 +88,27 @@ class UserType extends AbstractType
                     new Assert\Email()
                 ]
             ])
-            ->add('password', TextType::class, [
+            ->add('password', PasswordType::class, [
                 'attr' => [
                     'class' => 'form-control',
                     'minlength' => '6' ,
-                    'maxlength' => '15'
-                ],
+                ], 
+                'hash_property_path' => 'password',
+                    'mapped' => false,
                 'label' => 'Mot de passe',
                 'label_attr' => [
-                    'class' => 'form-label mt-4'
+                    'class' => 'form-label mt-4',
                 ],
                 'constraints' => [
-                    new Assert\NotBlank(),
-                    new Assert\NotNull(),
-                    new Assert\Length(['min'=>6,'max'=>50])
+                    new Assert\Length(['min'=>6])
                 ]
+            ])
+
+            ->add('submit' , SubmitType::class, [
+                'attr' => [
+                'class' => 'btn btn-primary mt-4'
+            ],
+                'label' => 'Créer mon compte'
             ]);
     }
 

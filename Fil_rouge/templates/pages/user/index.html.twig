@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block body %}
-
+    <div class="d-flex justify-content-center">
+<a href="{{ path('user.new') }}" class="btn btn-primary mt-5" style="width: 20%"> créer un utilisateur</a></div>
     <div class="container mt-5">
         {% if not user.items is same as ([]) %}
         <h1 class="justify-content-center d-flex text-decoration-underline"> Liste des utilisateurs </h1>

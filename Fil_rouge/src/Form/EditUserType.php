@@ -3,20 +3,16 @@
 namespace App\Form;
 
 use App\Entity\User;
-
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-
 use Symfony\Component\Validator\Constraints as Assert;
 
-class UserType extends AbstractType
+class EditUserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -75,40 +71,11 @@ class UserType extends AbstractType
                     new Assert\NotNull()
                 ]
             ])
-            ->add('email', TextType::class, [
-                'attr' => [
-                    'class' => 'form-control'
-                ],
-                'label' => 'E-mail',
-                'label_attr' => [
-                    'class' => 'form-label mt-4'
-                ],
-                'constraints' => [
-                    new Assert\NotBlank(),
-                    new Assert\NotNull(),
-                    new Assert\Email()
-                ]
-            ])
-            ->add('password', PasswordType::class, [
-                'attr' => [
-                    'class' => 'form-control',
-                    'minlength' => '6' ,
-                ],
-                'hash_property_path' => 'password',
-                    'mapped' => false,
-                'label' => 'Mot de passe',
-                'label_attr' => [
-                    'class' => 'form-label mt-4',
-                ],
-                'constraints' => [
-                    new Assert\Length(['min'=>6])
-                ]
-            ])
 
             ->add('submit' , SubmitType::class, [
                 'attr' => [
-                'class' => 'btn btn-primary mt-4'
-            ],
+                    'class' => 'btn btn-primary mt-4'
+                ],
                 'label' => 'Valider'
             ])
             ->add('cancel' , SubmitType::class, [
@@ -118,8 +85,6 @@ class UserType extends AbstractType
                 'label' => 'Annuler'
             ]);
     }
-
-
 
     public function configureOptions(OptionsResolver $resolver): void
     {

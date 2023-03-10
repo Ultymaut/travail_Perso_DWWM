@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec25d6e0-553f-45e5-a6b5-4f82427a3ca2" name="Changes" comment="" />
+    <list default="true" id="ec25d6e0-553f-45e5-a6b5-4f82427a3ca2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/src/Controller/Admincontroller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/templates/baseConnect.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/templates/pages/admin/indexAdmin.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/templates/pages/admin/modifAdmin.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/templates/pages/admin/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/templates/pages/security/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fil_rouge/templates/pages/user/modif.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/migrations/Version20230309141234.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/templates/pages/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/templates/pages/user/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/templates/pages/user/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/templates/partials/_footer.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/templates/partials/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/templates/partials/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fil_rouge/templates/partials/_inscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../Fil_rouge/templates/partials/_inscription.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,20 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/la_boite_a_jurons&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/travail_Perso_DWWM/la_boite_a_jurons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,6 +74,7 @@
       <workItem from="1678012358045" duration="2971000" />
       <workItem from="1678054249540" duration="337000" />
       <workItem from="1678262136965" duration="7000" />
+      <workItem from="1678449133925" duration="3000" />
     </task>
     <servers />
   </component>

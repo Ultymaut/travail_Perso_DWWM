@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1 class="mt-4 d-flex justify-content-center text-decoration-underline">
+            Création d'un user
+        </h1>
+        {{ form_start(form) }}
+
+
+        <div class="row mt-5">
+            <div class="col">
+                {{ form_row(form.name) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.name) }}
+                </div>
+            </div>
+
+            <div class="col" id="some-custom-id">
+                {{ form_row(form.surname) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.surname) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                {{ form_row(form.birthday) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.birthday) }}
+                </div>
+            </div>
+
+            <div class="col" id="some-custom-id">
+                {{ form_row(form.email) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.email) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                {{ form_row(form.login) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.login) }}
+                </div>
+            </div>
+
+            <div class="col" id="some-custom-id">
+                {{ form_row(form.password) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.password) }}
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="col d-flex justify-content-center">
+                {{ form_row(form.submit) }}
+                {{ form_row(form.cancel) }}
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}

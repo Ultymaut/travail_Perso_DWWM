@@ -1,4 +1,4 @@
-{% extends "baseUserConnected.html.twig" %}
+{% extends "baseConnect.html.twig" %}
 {% block title %}Page User
 
 {% endblock %}
@@ -14,11 +14,15 @@
         </div>
     {% endfor %}
 
+    <div class="d-flex justify-content-center" >
+        <a href="{{ path('Admin.new') }}" class="btn btn-primary mt-4" style="width: 20%"> créer un utilisateur</a></div>
     <div class="container mt-4">
         {% if not user.items is same as ([]) %}
 
-            <h1 class="justify-content-center d-flex text-decoration-underline"> Ton profil </h1>
-
+            <h1 class="justify-content-center d-flex text-decoration-underline"> Liste des utilisateurs </h1>
+            <div class="count d-flex justify-content-center mt-4">
+                <h4> Il y à {{ user.getTotalItemCount }} utilisateur(s) enregistré(s) sur le site</h4>
+            </div>
             <div class="justify-content-center d-flex mt-3">
 
                 <table class="table table-hover">

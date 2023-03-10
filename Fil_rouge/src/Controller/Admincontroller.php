@@ -13,7 +13,7 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\UserType;
 
-class UserController extends AbstractController
+class Admincontroller extends AbstractController
 {
     /**
      * Controller qui montre tous les users de la bdd
@@ -22,7 +22,7 @@ class UserController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/user', name: 'user.index', methods: ['GET'])]
+    #[Route('/admin', name: 'admin.index', methods: ['GET'])]
     public function index(UserRepository $repository, PaginatorInterface $paginator, Request $request): Response
     {
         $user = $paginator->paginate(
@@ -43,7 +43,7 @@ class UserController extends AbstractController
      * @param EntityManagerInterface $manager
      * @return Response
      */
-    #[Route('/user/nouveau', 'user.new', methods: ['GET', 'POST'])]
+    #[Route('/user/AdminNew', 'Admin.new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $manager): Response
     {
         $user = new User();
@@ -60,10 +60,10 @@ class UserController extends AbstractController
                 'Votre compte à été créé avec succès !'
             );
 
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('user.index');
         }
 
-        return $this->render('pages/security/new.html.twig',
+        return $this->render('pages/user/new.html.twig',
             [
                 'form' => $form->createView()
             ]);

@@ -91,6 +91,14 @@ class UserController extends AbstractController
                 'form' => $form->createView()
             ]);
     }
+    #[Route ('/user/modif/cancel', 'cancel' , methods: ['GET'])]
+    public function editCancel(){
+        $this->addFlash(
+            'warning',
+            "rien n'a été changé"
+        );
+        return $this->redirectToRoute("user.index");
+    }
     #[Route('/user/delete/{id}' , 'user.delete', methods: ['GET'])]
     public function delete(EntityManagerInterface $manager , User $user) :Response
     {

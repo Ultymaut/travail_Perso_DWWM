@@ -78,12 +78,7 @@ class EditUserType extends AbstractType
                 ],
                 'label' => 'Valider'
             ])
-            ->add('cancel' , SubmitType::class, [
-                'attr' => [
-                    'class' => 'btn btn-outline-warning ms-4 mt-4'
-                ],
-                'label' => 'Annuler'
-            ]);
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

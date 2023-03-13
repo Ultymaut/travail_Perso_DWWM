@@ -50,7 +50,7 @@
                             <td class="ps-5">{{ user.birthday|date('d/m/Y') }}</td>
                             <td class="ps-5">{{ user.login }}</td>
                             <td class="ps-5">{{ user.email }}</td>
-                            <td class="ps-5"> <a class="btn btn-warning btn-sm" href="{{ path('user.modif',{'id': user.id}) }}"> Modif</a> </td>
+                            <td class="ps-5"> <a class="btn btn-warning btn-sm" href="{{ path('user.modif',{'id': user.id}) }}"> Modifier</a> </td>
                             <td class="ps-5"> <a class="btn btn-danger btn-sm" href="{{ path('user.delete',{'id': user.id}) }}"> Delete</a> </td>
                         </tr>
                         </tbody>

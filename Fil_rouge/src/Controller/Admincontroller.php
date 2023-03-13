@@ -32,7 +32,7 @@ class Admincontroller extends AbstractController
         );
 
 
-        return $this->render('pages/user/index.html.twig', [
+        return $this->render('pages/admin/indexAdmin.html.twig', [
             'user' => $user
         ]);
     }
@@ -57,13 +57,13 @@ class Admincontroller extends AbstractController
             // do some sort of processing
             $this->addFlash(
                 'success',
-                'Votre compte à été créé avec succès !'
+                'le compte à été créé avec succès !'
             );
 
-            return $this->redirectToRoute('user.index');
+            return $this->redirectToRoute('admin.index');
         }
 
-        return $this->render('pages/user/new.html.twig',
+        return $this->render('pages/admin/new.html.twig',
             [
                 'form' => $form->createView()
             ]);

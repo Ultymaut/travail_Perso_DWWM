@@ -25,15 +25,13 @@ class UserController extends AbstractController
     #[Route('/user', name: 'user.index', methods: ['GET'])]
     public function index(UserRepository $repository, PaginatorInterface $paginator, Request $request): Response
     {
-        $user = $paginator->paginate(
-            $repository->findAll(),
-            $request->query->getInt('page', 1),
-            10
-        );
 
+        if ($this->getUser()->getRoles() === ["ROLE_ADMIN", "ROLE_USER"]){
+            return $this->redirectToRoute('admin.index');
+        }
 
         return $this->render('pages/user/index.html.twig', [
-            'user' => $user
+            'user' => $this->getUser()
         ]);
     }
 
@@ -43,7 +41,7 @@ class UserController extends AbstractController
      * @param EntityManagerInterface $manager
      * @return Response
      */
-    #[Route('/user/nouveau', 'user.new', methods: ['GET', 'POST'])]
+    #[Route('/nouveau', 'user.new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $manager): Response
     {
         $user = new User();

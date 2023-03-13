@@ -107,13 +107,13 @@ class UserType extends AbstractType
 
             ->add('submit' , SubmitType::class, [
                 'attr' => [
-                'class' => 'btn btn-primary mt-4'
+                'class' => 'btn btn-outline-primary mt-4'
             ],
                 'label' => 'Valider'
             ])
             ->add('cancel' , SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-danger ms-4 mt-4'
+                    'class' => 'btn btn-outline-warning ms-4 mt-4'
                 ],
                 'label' => 'Annuler'
             ]);

@@ -68,7 +68,7 @@ class Admincontroller extends AbstractController
                 'form' => $form->createView()
             ]);
     }
-    #[Route ('/user/modif/{id}', 'user.modif' , methods: ['GET', 'POST'])]
+    #[Route ('/admin/modif/{id}', 'admin.modif' , methods: ['GET', 'POST'])]
     public function edit(User $user, Request $request, EntityManagerInterface $manager) : Response
     {
 
@@ -85,15 +85,15 @@ class Admincontroller extends AbstractController
                 'Le compte à été modifier avec succès !'
             );
 
-            return $this->redirectToRoute('user.index');
+            return $this->redirectToRoute('admin.index');
         }
 
-        return $this->render('pages/user/modif.html.twig',
+        return $this->render('pages/admin/modifAdmin.html.twig',
             [
                 'form' => $form->createView()
             ]);
     }
-    #[Route('/user/delete/{id}' , 'user.delete', methods: ['GET'])]
+    #[Route('/admin/delete/{id}' , 'user.delete', methods: ['GET'])]
     public function delete(EntityManagerInterface $manager , User $user) :Response
     {
 

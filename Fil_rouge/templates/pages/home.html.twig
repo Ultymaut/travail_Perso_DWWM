@@ -1,7 +1,15 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-
+    {% for message in app.flashes('success') %}
+        <div class="justify-content-center d-flex">
+            <div class="alert alert-success mt-4 justify-content-center d-flex" style="width: 50%; height: 50%" >
+                <h5>
+                    {{ message }}
+                </h5>
+            </div>
+        </div>
+    {% endfor %}
     {% block info %}
         {% include 'partials/_inscription.html.twig' %}
     {% endblock %}

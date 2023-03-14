@@ -23,12 +23,11 @@
             <div class="count d-flex justify-content-center mt-4">
                 <h4> Il y à {{ user.getTotalItemCount }} utilisateur(s) enregistré(s) sur le site</h4>
             </div>
-            <div class="justify-content-center d-flex mt-3">
+            <div class="justify-content-center d-flex mt-3 ">
 
-                <table class="table table-hover">
+                <table class="table table-hover ">
                     <thead>
-                    <tr class="table-light">
-                        <th scope="row"></th>
+                    <tr class="table-light ">
                         <td class="table-light pe-5"> ID</td>
                         <td class="table-light ps-5 pe-5"> NOM</td>
                         <td class="table-light ps-5 pe-5"> PRENOM</td>
@@ -43,7 +42,6 @@
 
                         <tbody>
                         <tr class="table-dark">
-                            <th scope="row"></th>
                             <td>{{ user.id }}</td>
                             <td class="ps-5">{{ user.name }}</td>
                             <td class="ps-5">{{ user.surname }}</td>

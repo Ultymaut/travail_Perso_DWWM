@@ -47,15 +47,6 @@
             "./migrations/.gitignore"
         ]
     },
-    "easycorp/easyadmin-bundle": {
-        "version": "4.6",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "3.0",
-            "ref": "b131e6cbfe1b898a508987851963fff485986285"
-        }
-    },
     "knplabs/knp-paginator-bundle": {
         "version": "v6.1.1"
     },
@@ -312,6 +303,7 @@
             "./config/packages/messenger.yaml"
         ]
     },
+
     "twig/extra-bundle": {
         "version": "v3.5.1"
     },

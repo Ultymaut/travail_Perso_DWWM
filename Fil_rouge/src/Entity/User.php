@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use DoctrineMigrations;
+
 use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -10,9 +10,13 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+/**
+ * class User
+ */
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity('login')]
 #[UniqueEntity('email')]
+
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -27,7 +31,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private array $roles = [];
 
     /**
-     * @var string The hashed password
+     * var string The hashed password
      */
     #[ORM\Column]
     private ?string $password = null;

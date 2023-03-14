@@ -16,7 +16,7 @@ use App\Form\UserType;
 class UserController extends AbstractController
 {
     /**
-     * Controller qui montre tous les users de la bdd
+     * Controller qui montre les infos du user connecter
      * @param UserRepository $repository
      * @param PaginatorInterface $paginator
      * @param Request $request
@@ -66,6 +66,14 @@ class UserController extends AbstractController
                 'form' => $form->createView()
             ]);
     }
+
+    /**
+     * Modifie les donnés de son compte
+     * @param User $user
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route ('/user/modif/{id}', 'user.modif' , methods: ['GET', 'POST'])]
     public function edit(User $user, Request $request, EntityManagerInterface $manager) : Response
     {
@@ -91,25 +99,11 @@ class UserController extends AbstractController
                 'form' => $form->createView()
             ]);
     }
-    #[Route ('/user/modif/cancel', 'cancel' , methods: ['GET'])]
-    public function editCancel(){
-        $this->addFlash(
-            'warning',
-            "rien n'a été changé"
-        );
-        return $this->redirectToRoute("user.index");
-    }
     #[Route('/user/delete/{id}' , 'user.delete', methods: ['GET'])]
     public function delete(EntityManagerInterface $manager , User $user) :Response
     {
 
-        if (!$user){
-            $this->addFlash(
-                'warning',
-                "L'user n'a pas été trouvé!"
-            );
-            return $this->redirectToRoute('user.index');
-        }
+        $this->container->get("security.token_storage")->setToken(null);
 
         $manager->remove($user);
         $manager->flush();
@@ -117,6 +111,6 @@ class UserController extends AbstractController
             'success',
             'Le compte à été supprimé avec succès !'
         );
-        return $this->redirectToRoute('user.index');
+        return $this->redirectToRoute('home.index');
     }
 }
